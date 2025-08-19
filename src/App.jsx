@@ -3,6 +3,9 @@ import Navbar from "./components/Navbar.jsx";
 import Home from './pages/Home.jsx';
 import ReportItem from './pages/ReportItem.jsx';
 import ItemList from './pages/ItemList.jsx';
+import SignupPage from "./pages/SignupPage";
+import SigninPage from "./pages/SigninPage";
+
 
 function App() {
   return (
@@ -13,6 +16,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Report" element={<ReportItem />} />
           <Route path="/Items" element={<ItemList />} />
+          <Route path="/signup" element={<SignupPage />} />
+<Route path="/login" element={<SigninPage />} />
         </Routes>
       </div>
     </>

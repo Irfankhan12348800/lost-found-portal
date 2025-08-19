@@ -1,0 +1,74 @@
+.signin-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4f7cff 0%, #3b62d9 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.signup-form {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.signup-form h2 {
+  text-align: center;
+  color: #4f7cff;
+  font-size: 2rem;
+  margin: 0;
+}
+
+input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4f7cff;
+}
+
+button {
+  background: linear-gradient(135deg, #4f7cff 0%, #3b62d9 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #3b62d9 0%, #2a4cad 100%);
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.switch-text {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+}
+
+.signup-link {
+  color: #4f7cff;
+  text-decoration: none;
+  font-weight: 500;
+}
