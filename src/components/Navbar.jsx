@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; 
 import { useAuth } from "../context/AuthContext";
@@ -6,12 +6,18 @@ import { useAuth } from "../context/AuthContext";
 function Navbar() {
   const { user, logout } = useAuth();
   const location = useLocation();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   // Signup/Login pages par Navbar hide hoga
   if (location.pathname === "/signup" || location.pathname === "/login") {
     return null;
   }
+
+  const handleLogout = () => {
+    logout(); // logout logic from context
+    navigate("/login"); // redirect to login page
+  };
 
   return (
     <nav className="bg-blue-600 text-white p-4 shadow-md">
@@ -45,12 +51,12 @@ function Navbar() {
               <Link to="/" className="hover:underline">Home</Link>
               <Link to="/report" className="hover:underline">Report</Link>
               <Link to="/items" className="hover:underline">Items</Link>
-            <Link to="/login"><button
-                onClick={logout}
+              <button
+                onClick={handleLogout}
                 className="bg-red-500 px-3 py-1 rounded hover:bg-red-600"
               >
-                Logout 
-              </button></Link>  
+                Logout
+              </button>
             </>
           )}
         </div>
@@ -89,7 +95,7 @@ function Navbar() {
               <Link to="/report" className="block hover:underline" onClick={() => setIsOpen(false)}>Report</Link>
               <Link to="/items" className="block hover:underline" onClick={() => setIsOpen(false)}>Items</Link>
               <button
-                onClick={() => { logout(); setIsOpen(false); }}
+                onClick={() => { handleLogout(); setIsOpen(false); }}
                 className="block bg-red-500 px-3 py-1 rounded hover:bg-red-600 w-full text-left"
               >
                 Logout
