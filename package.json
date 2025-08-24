@@ -8,8 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.56.0",
+    "browser-image-compression": "^2.0.2",
     "firebase": "^12.0.0",
-    "lucide-react": "^0.539.0",
+    "lucide-react": "^0.541.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.21.2"

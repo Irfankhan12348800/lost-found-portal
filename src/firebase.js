@@ -2,12 +2,13 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";   // 👈 Authentication import
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBRQuhNjMAAeIMXZMQfLpzECcI8_ml4-_0",
   authDomain: "lostfoundportal-7c6ba.firebaseapp.com",
   projectId: "lostfoundportal-7c6ba",
-  storageBucket: "lostfoundportal-7c6ba.firebasestorage.app",
+storageBucket: "lostfoundportal-7c6ba.appspot.com",
   messagingSenderId: "18060682777",
   appId: "1:18060682777:web:e237d18d03b4db477dac88",
   measurementId: "G-3T23E2D8Q5"
@@ -21,3 +22,4 @@ export const db = getFirestore(app);
 
 // Authentication
 export const auth = getAuth(app);   // 👈 Ye export karna zaroori hai
+export const storage = getStorage(app); 
